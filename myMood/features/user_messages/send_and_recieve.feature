@@ -7,8 +7,7 @@ Feature: recieve and reply to message from admin
         
 Background: Admin has prescheduled messages to ask about moods of patients.
   
-  Given the admin has sent the text message: "Hello, user! How are you feeling today on a scale
-  of 1 to 10?" and the user is logged into myMood.
+  Given the admin has sent a text message asking what their mood is and I am logged into mymood
   
 Scenario: User recieves message via text message on phone, and replies with a "5", looks in message history.
   When I open the text message
