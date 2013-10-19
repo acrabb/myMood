@@ -1,0 +1,33 @@
+#user_pic {
+    padding-top: 5px;
+}
+
+#content {
+    padding-top: 60px;
+}
+
+html, body, .wrapper {
+    height:100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.wrapper td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.centered {
+    text-align: center;
+}
+
+.row-fluid .offset1 {
+    margin-left: 8%;
+}
+
+.withline {
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+}

@@ -1,0 +1,108 @@
+%html
+
+  %head
+    %meta{ name: 'viewport', content: 'width=device-width; initial-scale=1.0;'}
+    %title My Mood
+    = stylesheet_link_tag 'bootstrap'
+    = stylesheet_link_tag 'index'
+    = stylesheet_link_tag 'bootstrap-responsive'
+
+  %body
+    %div.navbar.navbar-inverse.navbar-fixed-top
+      %div.navbar-inner
+        %div.container-fluid
+          %div.brand MyMood
+          %form.navbar-search
+            %input{:class => 'search-query', :type => 'text', :placeholder => 'Search'}
+          %ul.nav.pull-right
+            %li#user_pic=image_tag 'fake_user_small.png'
+            %li <a href="#">username</a>
+            %li.divider-vertical
+            %li <a href="#">logout</a>
+
+    %div.tabbable.tabs-left#content
+      %ul.nav.nav-tabs
+        %li.active <a href="#lA" data-toggle="tab">Home</a>
+        %li <a href="#lB" data-toggle="tab">Mood Graphs</a>
+        %li <a href="#lC" data-toggle="tab">Send Messages</a>
+        %li <a href="#lD" data-toggle="tab">Patient Management</a>
+      %div.tab-content
+        %div.tab-pane.active#lA
+          %div.container-fluid
+            %div.row-fluid
+              %div.span11
+                %h3 All Users
+                %div.well
+                  %h4 Information
+                  %p ie. list of inactive users or aggregation of all users (customizable)
+              %h3 Subgroups
+              %div.row-fluid.centered
+                %div.span5
+                  %div.row-fluid.well
+                    %div.span4
+                      %table.wrapper
+                        %tr
+                          %td=image_tag 'fake_user_big.png'
+                    %div.span4.withline
+                      %h4 <a href="#">Group Blue</a>
+                      %p 12 members
+                      %p 3 inactive
+                    %div.span4
+                      %p Avg Mood
+                      %table.wrapper
+                        %tr
+                          %td=image_tag 'perfect_moods.png'
+                %div.span5.offset1
+                  %div.row-fluid.well
+                    %div.span4
+                      %table.wrapper
+                        %tr
+                          %td=image_tag 'fake_user_big.png'
+                    %div.span4.withline
+                      %h4 <a href="#">Group Green</a>
+                      %p 10 members
+                      %p 0 inactive
+                    %div.span4
+                      %p Avg Mood
+                      %table.wrapper
+                        %tr
+                          %td=image_tag 'bad_moods.png'
+              %div.row-fluid.centered
+                %div.span5
+                  %div.row-fluid.well
+                    %div.span4
+                      %table.wrapper
+                        %tr
+                          %td=image_tag 'fake_user_big.png'
+                    %div.span4.withline
+                      %h4 <a href="#">Group Red</a>
+                      %p 20 members
+                      %p 3 inactive
+                    %div.span4
+                      %p Avg Mood
+                      %table.wrapper
+                        %tr
+                          %td=image_tag 'okay_moods.png'
+                %div.span5.offset1
+                  %div.row-fluid.well
+                    %div.span4
+                      %table.wrapper
+                        %tr
+                          %td=image_tag 'fake_user_big.png'
+                    %div.span4.withline
+                      %h4 <a href="#">Group Purple</a>
+                      %p 17 members
+                      %p 7 inactive
+                    %div.span4
+                      %p Avg Mood
+                      %table.wrapper
+                        %tr
+                          %td=image_tag 'average_moods.png'
+        %div.tab-pane#lB
+          %p Mood Graphs go here
+        %div.tab-pane#lC
+          %p Send all the messages here!
+        %div.tab-pane#lD
+          %p Manage the patients here
+
+    = javascript_include_tag 'bootstrap'
