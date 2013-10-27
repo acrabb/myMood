@@ -3,9 +3,9 @@
   %head
     %meta{ name: 'viewport', content: 'width=device-width; initial-scale=1.0;'}
     %title My Mood
-    = stylesheet_link_tag 'bootstrap'
+    = stylesheet_link_tag 'bootstrap.min'
     = stylesheet_link_tag 'index'
-    = stylesheet_link_tag 'bootstrap-responsive'
+    = stylesheet_link_tag 'bootstrap-responsive.min'
 
   %body
     %div.navbar.navbar-inverse.navbar-fixed-top
@@ -16,7 +16,7 @@
             %input{:class => 'search-query', :type => 'text', :placeholder => 'Search'}
           %ul.nav.pull-right
             %li#user_pic=image_tag 'fake_user_small.png'
-            %li <a href="#">username</a>
+            %li <a href="#">user</a>
             %li.divider-vertical
             %li <a href="#">logout</a>
 
@@ -99,10 +99,13 @@
                         %tr
                           %td=image_tag 'average_moods.png'
         %div.tab-pane#lB
-          %p Mood Graphs go here
+          -#%p Mood Graphs go here
+
         %div.tab-pane#lC
           %p Send all the messages here!
         %div.tab-pane#lD
           %p Manage the patients here
 
-    = javascript_include_tag 'bootstrap'
+    = javascript_include_tag 'bootstrap.min.js'
+    = javascript_include_tag 'd3.v3.min.js'
+    = javascript_include_tag 'index.js'

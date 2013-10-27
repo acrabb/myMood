@@ -31,3 +31,16 @@ html, body, .wrapper {
     border-left: 3px solid white;
     border-right: 3px solid white;
 }
+
+body { font: 10px sans-serif;}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.line {
+    fill: none;  stroke-width: 1.5px;
+}
