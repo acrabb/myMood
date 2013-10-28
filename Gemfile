@@ -9,6 +9,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'cucumber-rails', '1.0.6', :require => false
   gem 'database_cleaner'
+  gem 'simplecov'
 end
 gem 'pg'
 
