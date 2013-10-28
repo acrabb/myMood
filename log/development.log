@@ -41247,3 +41247,84 @@ Compiled bootstrap-responsive.min.css  (0ms)  (pid 24007)
 Compiled bootstrap.min.css  (0ms)  (pid 24007)
 Compiled index.css  (0ms)  (pid 24007)
 Compiled application.css  (22ms)  (pid 24007)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (12.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (5.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (2.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (2.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (1.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-10-27 20:32:45 -0700
+Connecting to database specified by database.yml
+Processing by AdminController#index as HTML
+Compiled bootstrap.min.css  (0ms)  (pid 5186)
+Compiled index.css  (0ms)  (pid 5186)
+Compiled bootstrap-responsive.min.css  (0ms)  (pid 5186)
+Compiled bootstrap.min.js  (0ms)  (pid 5186)
+Compiled d3.v3.min.js  (0ms)  (pid 5186)
+Compiled index.js  (0ms)  (pid 5186)
+  Rendered admin/index.html.haml within layouts/application (124.9ms)
+Compiled application.css  (5ms)  (pid 5186)
+Compiled jquery.js  (2ms)  (pid 5186)
+Compiled jquery_ujs.js  (0ms)  (pid 5186)
+Compiled jquery-1.10.2.min.js  (0ms)  (pid 5186)
+Compiled application.js  (57ms)  (pid 5186)
+Completed 200 OK in 268ms (Views: 267.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-10-27 20:32:46 -0700
+Served asset /bootstrap-responsive.min.css - 200 OK (8ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-10-27 20:32:46 -0700
+Served asset /bootstrap.min.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-10-27 20:32:46 -0700
+Served asset /jquery_ujs.js - 200 OK (18ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-10-27 20:32:46 -0700
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/index.css?body=1" for 127.0.0.1 at 2013-10-27 20:32:46 -0700
+Served asset /index.css - 200 OK (10ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-10-27 20:32:46 -0700
+Served asset /bootstrap.min.js - 200 OK (1ms)
+
+
+Started GET "/assets/d3.v3.min.js?body=1" for 127.0.0.1 at 2013-10-27 20:32:46 -0700
+Served asset /d3.v3.min.js - 200 OK (1ms)
+
+
+Started GET "/assets/index.js?body=1" for 127.0.0.1 at 2013-10-27 20:32:46 -0700
+Served asset /index.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery-1.10.2.min.js?body=1" for 127.0.0.1 at 2013-10-27 20:32:46 -0700
+Served asset /jquery-1.10.2.min.js - 200 OK (10ms)
+Connecting to database specified by database.yml
+  [1m[36m (2.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (1.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
