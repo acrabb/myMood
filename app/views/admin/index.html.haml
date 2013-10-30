@@ -1,11 +1,13 @@
 %html
 
   %head
-    %meta{ name: 'viewport', content: 'width=device-width; initial-scale=1.0;'}
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
     %title My Mood
+
     = stylesheet_link_tag 'bootstrap.min'
-    = stylesheet_link_tag 'index'
     = stylesheet_link_tag 'bootstrap-responsive.min'
+    = stylesheet_link_tag 'index'
+    = stylesheet_link_tag 'jquery-ui'
 
   %body
     %div.navbar.navbar-inverse.navbar-fixed-top
@@ -22,13 +24,13 @@
 
     %div.tabbable.tabs-left#content
       %ul.nav.nav-tabs
-        %li.active <a href="#lA" data-toggle="tab">Home</a>
+        %li.active#home <a href="#lA" data-toggle="tab">Home</a>
         %li <a href="#lB" data-toggle="tab">Mood Graphs</a>
-        %li <a href="#lC" data-toggle="tab">Send Messages</a>
+        %li#msg-tab <a href="#lC" data-toggle="tab">Send Messages</a>
         %li <a href="#lD" data-toggle="tab">Patient Management</a>
       %div.tab-content
         %div.tab-pane.active#lA
-          %div.container-fluid
+          %div.container-fluid#A
             %div.row-fluid
               %div.span11
                 %h3 All Users
@@ -44,11 +46,11 @@
                         %tr
                           %td=image_tag 'fake_user_big.png'
                     %div.span4.withline
-                      %h4 <a href="#">Group Blue</a>
+                      %h4.send-msg-to-group <a href="">Group Blue</a>
                       %p 12 members
                       %p 3 inactive
                     %div.span4
-                      %p Avg Mood
+                      %p <a href="" class="group-mood" data-name="Blue Group" data-activemembers="12" data-inactive="3">Avg Mood</a>
                       %table.wrapper
                         %tr
                           %td=image_tag 'perfect_moods.png'
@@ -59,11 +61,11 @@
                         %tr
                           %td=image_tag 'fake_user_big.png'
                     %div.span4.withline
-                      %h4 <a href="#">Group Green</a>
+                      %h4.send-msg-to-group <a href="#">Group Green</a>
                       %p 10 members
                       %p 0 inactive
                     %div.span4
-                      %p Avg Mood
+                      %p <a href="" class="group-mood" data-name="Green Group" data-activemembers="10" data-inactive="0">Avg Mood</a>
                       %table.wrapper
                         %tr
                           %td=image_tag 'bad_moods.png'
@@ -75,11 +77,11 @@
                         %tr
                           %td=image_tag 'fake_user_big.png'
                     %div.span4.withline
-                      %h4 <a href="#">Group Red</a>
-                      %p 20 members
+                      %h4.send-msg-to-group <a href="#">Group Red</a>
+                      %p 10 members
                       %p 3 inactive
                     %div.span4
-                      %p Avg Mood
+                      %p <a href="" class="group-mood" data-name="Red Group" data-activemembers="10" data-inactive="3">Avg Mood</a>
                       %table.wrapper
                         %tr
                           %td=image_tag 'okay_moods.png'
@@ -90,22 +92,64 @@
                         %tr
                           %td=image_tag 'fake_user_big.png'
                     %div.span4.withline
-                      %h4 <a href="#">Group Purple</a>
+                      %h4.send-msg-to-group <a href="#">Group Purple</a>
                       %p 17 members
                       %p 7 inactive
                     %div.span4
-                      %p Avg Mood
+                      %p <a href="" class="group-mood" data-name="Purple Group" data-activemembers="17" data-inactive="7">Avg Mood</a>
                       %table.wrapper
                         %tr
                           %td=image_tag 'average_moods.png'
+          %div.container-fluid#B
         %div.tab-pane#lB
           -#%p Mood Graphs go here
-
         %div.tab-pane#lC
-          %p Send all the messages here!
+          %div.container-fluid
+            %div.row-fluid
+              %div.span5.well
+                %h3 Send Message
+                %form.form-inline
+                  To
+                  %input.input-medium{:type => 'text'}
+                Message
+                %p
+                %textarea#message-content{:rows => '3'}
+                %p
+                %form.form-inline
+                  Date
+                  %input.input-medium#datepicker{:type => 'text'}
+                  %div.pull-right
+                    Time
+                    %select
+                      %option 1:00am
+                      %option 2:00am
+                      %option 3:00am
+                      %option 4:00am
+                      %option 5:00am
+                      %option 6:00am
+                      %option 7:00am
+                      %option 9:00am
+                      %option 10:00am
+                      %option 11:00am
+                      %option 12:00pm
+                      %option 1:00pm
+                      %option 2:00pm
+                      %option 3:00pm
+                      %option 4:00pm
+                      %option 5:00pm
+                      %option 6:00pm
+                      %option 7:00pm
+                      %option 9:00pm
+                      %option 10:00pm
+                      %option 11:00pm
+                      %option 12:00am
+                %p
+                %button.btn-large#confirm-message-btn Send Message at Indicated Time
         %div.tab-pane#lD
           %p Manage the patients here
 
     = javascript_include_tag 'bootstrap.min.js'
     = javascript_include_tag 'd3.v3.min.js'
+    = javascript_include_tag 'jquery-1.10.2.min.js'
     = javascript_include_tag 'index.js'
+    = javascript_include_tag 'jquery-ui'
