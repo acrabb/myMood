@@ -100,6 +100,13 @@ function draw_group_graph(name, dataset) {
     }
 }
 
+var user_dataset = [
+    {"id": 110, "time": "2013-10-12", "score": 4, "userName": "Alice"},
+    {"id": 110, "time": "2013-10-13", "score": 10, "userName": "Alice"},
+    {"id": 110, "time": "2013-10-14", "score": 6, "userName": "Alice"},
+    {"id": 110, "time": "2013-10-15", "score": 4, "userName": "Alice"}
+];
+
 var admin_group_dataset = [
     {"id": 110, "time": "2013-10-12", "score": 4, "userName": "Alice"},
     {"id": 115, "time": "2013-10-12", "score": 3, "userName": "Clyde"},
@@ -275,6 +282,9 @@ var purple_group_dataset = [
 ];
 
 $(document).ready(function () {
+
+    $("#user-home-page").empty();
+    draw_group_graph("user-home-page", user_dataset);
 
     $(function() {
         $( "#datepicker" ).datepicker();
