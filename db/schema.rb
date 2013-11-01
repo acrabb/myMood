@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131028060917) do
+ActiveRecord::Schema.define(:version => 20131101212835) do
 
   create_table "mood_points", :force => true do |t|
     t.integer  "mood_score"
@@ -23,8 +23,11 @@ ActiveRecord::Schema.define(:version => 20131028060917) do
 
   create_table "users", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.string   "remember_token"
   end
+
+  add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
 end

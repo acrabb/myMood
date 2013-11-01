@@ -1,0 +1,85 @@
+%html
+
+  %head
+    %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+    %title My Mood
+
+    = stylesheet_link_tag 'bootstrap.min'
+    = stylesheet_link_tag 'bootstrap-responsive.min'
+    = stylesheet_link_tag 'index'
+    = stylesheet_link_tag 'jquery-ui'
+
+  %body
+    %div.navbar.navbar-inverse.navbar-fixed-top
+      %div.navbar-inner
+        %div.container-fluid
+          %div.brand MyMood
+          %form.navbar-search
+            %input{:class => 'search-query', :type => 'text', :placeholder => 'Search'}
+          %ul.nav.pull-right
+            %li#user_pic=image_tag 'fake_user_small.png'
+            %li <a href="#">user</a>
+            %li.divider-vertical
+            %li <a href="#">logout</a>
+
+    %div.tabbable.tabs-left#content
+      %ul.nav.nav-tabs
+        %li.active#home <a href="#lA" data-toggle="tab">Home</a>
+        %li <a href="#lB" data-toggle="tab">Mood Graph</a>
+        %li#msg-tab <a href="#lC" data-toggle="tab">Message History</a>
+        %li <a href="#lD" data-toggle="tab">Contact</a>
+        %li <a href="lE" data-toggle="tab">Tests</a>
+      %div.tab-content
+        %div.tab-pane.active#lA#user-home-page
+        %div.tab-pane#lB
+          -#%p Mood Graphs go here
+        %div.tab-pane#lC
+          %div.container-fluid
+            %div.row-fluid
+              %div.span5.well
+                %h3 Send Message
+                %form.form-inline
+                  To
+                  %input.input-medium{:type => 'text'}
+                Message
+                %p
+                %textarea#message-content{:rows => '3'}
+                %p
+                %form.form-inline
+                  Date
+                  %input.input-medium#datepicker{:type => 'text'}
+                  %div.pull-right
+                    Time
+                    %select
+                      %option 1:00am
+                      %option 2:00am
+                      %option 3:00am
+                      %option 4:00am
+                      %option 5:00am
+                      %option 6:00am
+                      %option 7:00am
+                      %option 9:00am
+                      %option 10:00am
+                      %option 11:00am
+                      %option 12:00pm
+                      %option 1:00pm
+                      %option 2:00pm
+                      %option 3:00pm
+                      %option 4:00pm
+                      %option 5:00pm
+                      %option 6:00pm
+                      %option 7:00pm
+                      %option 9:00pm
+                      %option 10:00pm
+                      %option 11:00pm
+                      %option 12:00am
+                %p
+                %button.btn-large#confirm-message-btn Send Message at Indicated Time
+        %div.tab-pane#lD
+          %p Manage the patients here
+
+    = javascript_include_tag 'bootstrap.min.js'
+    = javascript_include_tag 'd3.v3.min.js'
+    = javascript_include_tag 'jquery-1.10.2.min.js'
+    = javascript_include_tag 'index.js'
+    = javascript_include_tag 'jquery-ui'
