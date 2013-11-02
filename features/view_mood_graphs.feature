@@ -8,7 +8,7 @@ Background: Users 1, 2, and 3 have submitted moods every day for the past two we
 
 Given the following moods exist:
 
-  | created_at         | mood_score | user_id  |
+  | created_at  | mood_score | user_id  |
   | 12-Oct-2013 | 3 		| 1	|
   | 13-Oct-2013 | 4 		| 1	|
   | 14-Oct-2013 | 3 		| 1	|

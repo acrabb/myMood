@@ -7,9 +7,9 @@ Feature: create new user
 Background: users are in the database
   
   Given the following users exist:
-  | phone_number | name    | password | email |
-  | 1234567890   | Alice   | hunter2  | a@a.a |
-  | 1111111111   | Bob B   | abc      | b@b.b |
+  | phone_number | name    | password | email | permission_level |
+  | 1234567890   | Alice   | hunter2  | a@a.a | 0		 |
+  | 1111111111   | Bob B   | abc      | b@b.b | 0		 |
 
   And I am on the create account page
   
