@@ -10,7 +10,7 @@ Background: users have been added to the database
   | phone_number | name | password | email   |
   | 123-456-7890 | Bob  | pass     | a@a.com |
 
-User is on the myMood home page
+  And I am on the myMood home page
 
 Scenario: User attempts to sign in with no phone number or password
   When I fill in "Phone Number" with ""
