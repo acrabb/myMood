@@ -77,7 +77,7 @@ Scenario: Missing Confirm Password
 	
 	And I press "Submit"
 
-	Then I should see '"Password" and "Confirm Password" do not match.'
+	Then I should see "Passwords do not match."
 	
 Scenario: Password and Cofirm Password don't match
 	When I fill in "Name" with "Carol"
@@ -87,7 +87,7 @@ Scenario: Password and Cofirm Password don't match
 	
 	And I press "Submit"
 
-	Then I should see '"Password" and "Confirm Password" do not match.'
+	Then I should see "Passwords do not match."
 	
 Scenario: Phone Number taken
 	When I fill in "Name" with "Carol"
@@ -97,7 +97,7 @@ Scenario: Phone Number taken
 	
 	And I press "Submit"
 
-	Then I should see 'That phone number is already in our system.'
+	Then I should see "That phone number is already in our system."
 	
 Scenario: Invalid Phone Number
 	When I fill in "Name" with "Carol"
@@ -107,7 +107,7 @@ Scenario: Invalid Phone Number
 	
 	And I press "Submit"
 
-	Then I should see 'Invalid Phone Number.'
+	Then I should see "Invalid Phone Number."
 	
 Scenario: Invalid Phone Number (non-number)
 	When I fill in "Name" with "Carol"
@@ -117,4 +117,4 @@ Scenario: Invalid Phone Number (non-number)
 	
 	And I press "Submit"
 
-	Then I should see 'Invalid Phone Number.'
+	Then I should see "Invalid Phone Number."
