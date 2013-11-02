@@ -1,1 +1,32 @@
-%h1 HOMEPAGE!!!
+%html
+  %head
+    %title MyMood
+    = stylesheet_link_tag 'bootstrap.min'
+    = stylesheet_link_tag 'bootstrap-responsive.min'
+    = stylesheet_link_tag 'index'
+    = stylesheet_link_tag 'jquery-ui'
+
+  %body
+    %div.navbar.navbar-inverse.navbar-fixed-top
+      %div.navbar-inner
+        %div.container-fluid
+          %div.brand MyMood
+          %ul.nav.pull-left
+            %li.divider-vertical
+            %li <a href="#">About Us</a>
+            %li.divider-vertical
+            %li <a href="/signup">Sign Up</a>
+            %li.divider-vertical
+            %li <a href="#">Tell A Friend</a>
+            %li.divider-vertical
+
+  %div#content
+    %div
+      %h1 HOMEPAGE!
+      Phone Number
+      %input{:type=>"text", :required => true}
+      %br
+      Password
+      %input{:type=>"password", :required => true}
+      %br
+      = submit_tag "Log In"

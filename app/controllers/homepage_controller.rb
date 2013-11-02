@@ -4,4 +4,8 @@ class HomepageController < ApplicationController
   
   end
 
+  def signup
+
+  end
+
 end
