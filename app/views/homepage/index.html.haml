@@ -25,10 +25,10 @@
   %div#content
     %div
       %h1 HOMEPAGE!
-      Phone Number
-      %input{:type=>"text", :required => true}
-      %br
-      Password
-      %input{:type=>"password", :required => true}
-      %br
-      = submit_tag "Log In"
+      = form_tag sessions_path do
+        = label :session, :phone_number, 'Phone Number'
+        = text_field :session, :phone_number, :required => true
+        = label :session, :password, 'Password'
+        = text_field :session, :password, :required => true
+        %br
+        = submit_tag "Log In"
