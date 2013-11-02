@@ -15,43 +15,43 @@ Background: users have been added to the database
 Scenario: User attempts to sign in with no phone number or password
   When I fill in "phone_number_field" with ""
   When I fill in "password_field" with ""
-  And I press "submit"
+  And I press "Log In"
   Then I should see "Invalid phone number or password"
   
 Scenario: User attempts to sign in with no phone number but correct password
   When I fill in "phone_number_field" with ""
   When I fill in "password_field" with "pass"
-  And I press "submit"
+  And I press "Log In"
   Then I should see "Invalid phone number or password"
   
 Scenario: User attempts to sign in with a valid phone number but no password
   When I fill in "phone_number_field" with "123-456-7890"
   When I fill in "password_field" with ""
-  And I press "submit"
+  And I press "Log In"
   Then I should see "Invalid phone number or password"
   
 Scenario: User attempts to sign in with a correct phone number and wrong password
   When I fill in "phone_number_field" with "123-456-7890"
   When I fill in "password_field" with "blah"
-  And I press "submit"
+  And I press "Log In"
   Then I should see "Invalid phone number or password"
 
 Scenario: User attempts to sign in with an invalid phone number and correct password
   When I fill in "phone_number_field" with "123456"
   When I fill in "password_field" with "pass"
-  And I press "submit"
+  And I press "Log In"
   Then I should see "Invalid phone number or password"
   
 Scenario: User attempts to sign in with an incorrect phone number and password
   When I fill in "phone_number_field" with "12345"
   When I fill in "password_field" with "blah"
-  And I press "submit"
+  And I press "Log In"
   Then I should see "Invalid phone number or password"
   
 Scenario: User attempts to sign in with a correct phone number and correct password
   When I fill in "phone_number_field" with "123-456-7890"
   When I fill in "password_field" with "pass"
-  And I press "submit"
+  And I press "Log In"
   Then I should be on the user index
   And I should see "Welcome, Bob"
  

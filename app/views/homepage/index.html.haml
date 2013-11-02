@@ -26,9 +26,9 @@
     %div
       %h1 HOMEPAGE!
       Phone Number
-      %input{:type=>"text", :required => true}
+      %input{:id => "phone_number_field", :type=>"text", :required => true}
       %br
       Password
-      %input{:type=>"password", :required => true}
+      %input{:id => "password_field", :type=>"password", :required => true}
       %br
       = submit_tag "Log In"
