@@ -1,6 +1,6 @@
 %html
   %head
-    %title MyMood
+    %title MyMood: SignUp
     = stylesheet_link_tag 'bootstrap.min'
     = stylesheet_link_tag 'bootstrap-responsive.min'
     = stylesheet_link_tag 'index'
@@ -24,11 +24,20 @@
 
   %div#content
     %div
-      %h1 HOMEPAGE!
+      %h1 SIGN UP PAGE
+      Name
+      %input{:id => "name_field", :type=>"text", :required => true}
+      %br
       Phone Number
-      %input{:type=>"text", :required => true}
+      %input{:id => "phone_number_field", :type=>"text", :required => true}
+      %br
+      Email
+      %input{:id => "email_field", :type=>"text", :required => true}
       %br
       Password
-      %input{:type=>"password", :required => true}
+      %input{:id => "password_field", :type=>"password", :required => true}
       %br
-      = submit_tag "Log In"
+      Confirm Password
+      %input{:id => "confirm_password_field", :type=>"password", :required => true}
+      %br
+      = submit_tag "Sign Up"
