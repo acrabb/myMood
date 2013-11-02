@@ -11,7 +11,7 @@ Background: users are in the database
   | 1234567890   | Alice   | hunter2  | a@a.a | 0		 |
   | 1111111111   | Bob B   | abc      | b@b.b | 0		 |
 
-  And I am on the create account page
+  And I am on the sign up page
   
 Scenario: Correct Information with an email
 	When I fill in "user_name" with "Carol"
