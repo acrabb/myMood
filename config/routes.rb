@@ -1,6 +1,7 @@
 MyMood::Application.routes.draw do
   get "user/index"
 
+  get '/', to: 'homepage#index', as: 'home'
   match '/admin/index', :controller => 'admin', :action => 'index'
   resources :admin, :users
 	resources :sessions, only: [:new, :create, :destroy]
