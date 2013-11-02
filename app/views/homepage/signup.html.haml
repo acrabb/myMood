@@ -25,19 +25,16 @@
   %div#content
     %div
       %h1 SIGN UP PAGE
-      Name
-      %input{:id => "name_field", :type=>"text", :required => true}
-      %br
-      Phone Number
-      %input{:id => "phone_number_field", :type=>"text", :required => true}
-      %br
-      Email
-      %input{:id => "email_field", :type=>"text", :required => true}
-      %br
-      Password
-      %input{:id => "password_field", :type=>"password", :required => true}
-      %br
-      Confirm Password
-      %input{:id => "confirm_password_field", :type=>"password", :required => true}
-      %br
-      = submit_tag "Sign Up"
+      = form_tag signup_path do
+        = label :user, :name, 'Name'
+        = text_field :user, :name
+        = label :user, :phone_number, 'Phone Number'
+        = text_field :user, :phone_number
+        = label :user, :email, 'Email'
+        = text_field :user, :email
+        = label :user, :password, 'Password'
+        = password_field :user, :password
+        = label :user, :confirm_password, 'Confirm Password'
+        = password_field :user, :confirm_password
+        %br
+        = submit_tag "Sign Up"
