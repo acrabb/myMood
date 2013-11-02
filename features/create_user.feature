@@ -14,11 +14,11 @@ Background: users are in the database
   And I am on the create account page
   
 Scenario: Correct Information with an email
-	When I fill in "Name" with "Carol"
-	And I fill in "Number" with "222-222-2222"
-	And I fill in "Password" with "password123"
-	And I fill in "Confirm" with "password123"
-	And I fill in "Email" with "carol@foo.com"
+	When I fill in "name_field" with "Carol"
+	And I fill in "phone_number_field" with "222-222-2222"
+	And I fill in "password_field" with "password123"
+	And I fill in "confirm_password_field" with "password123"
+	And I fill in "email_field" with "carol@foo.com"
 	
 	And I press "Submit"
 
@@ -28,10 +28,10 @@ Scenario: Correct Information with an email
 
 
 Scenario: Correct Information with no email
-	When I fill in "Name" with "Carol"
-	And I fill in "Number" with "222-222-2222"
-	And I fill in "Password" with "password123"
-	And I fill in "Confirm" with "password123"
+	When I fill in "name_field" with "Carol"
+	And I fill in "phone_number_field" with "222-222-2222"
+	And I fill in "password_field" with "password123"
+	And I fill in "confirm_password_field" with "password123"
 	
 	And I press "Submit"
 
@@ -42,9 +42,9 @@ Scenario: Correct Information with no email
 	
 
 Scenario: Missing User Name
-	When I fill in "Number" with "222-222-2222"
-	And I fill in "Password" with "password123"
-	And I fill in "Confirm" with "password123"
+	When I fill in "phone_number_field" with "222-222-2222"
+	And I fill in "password_field" with "password123"
+	And I fill in "confirm_password_field" with "password123"
 	
 	And I press "Submit"
 
@@ -52,9 +52,9 @@ Scenario: Missing User Name
 	
 
 Scenario: Missing Phone Number
-  When I fill in "Name" with "Carol"
-	And I fill in "Password" with "password123"
-	And I fill in "Confirm" with "password123"
+  When I fill in "name_field" with "Carol"
+	And I fill in "password_field" with "password123"
+	And I fill in "confirm_password_field" with "password123"
 	
 	And I press "Submit"
 
@@ -62,58 +62,58 @@ Scenario: Missing Phone Number
 	
 
 Scenario: Missing Password
-	When I fill in "Name" with "Carol"
-	And I fill in "Number" with "222-222-2222"
-	And I fill in "Confirm" with "password123"
+	When I fill in "name_field" with "Carol"
+	And I fill in "phone_number_field" with "222-222-2222"
+	And I fill in "confirm_password_field" with "password123"
 	
 	And I press "Submit"
 
 	Then I should see "Password is a required field."
 	
 Scenario: Missing Confirm Password
-	When I fill in "Name" with "Carol"
-	And I fill in "Number" with "222-222-2222"
-	And I fill in "Password" with "password123"
+	When I fill in "name_field" with "Carol"
+	And I fill in "phone_number_field" with "222-222-2222"
+	And I fill in "password_field" with "password123"
 	
 	And I press "Submit"
 
 	Then I should see "Passwords do not match."
 	
 Scenario: Password and Cofirm Password don't match
-	When I fill in "Name" with "Carol"
-	And I fill in "Number" with "222-222-2222"
-	And I fill in "Password" with "password123"
-	And I fill in "Confirm" with "Password123"
+	When I fill in "name_field" with "Carol"
+	And I fill in "phone_number_field" with "222-222-2222"
+	And I fill in "password_field" with "password123"
+	And I fill in "confirm_password_field" with "Password123"
 	
 	And I press "Submit"
 
 	Then I should see "Passwords do not match."
 	
 Scenario: Phone Number taken
-	When I fill in "Name" with "Carol"
-	And I fill in "Number" with "123-456-7890"
-	And I fill in "Password" with "password123"
-	And I fill in "Confirm" with "password123"
+	When I fill in "name_field" with "Carol"
+	And I fill in "phone_number_field" with "123-456-7890"
+	And I fill in "password_field" with "password123"
+	And I fill in "confirm_password_field" with "password123"
 	
 	And I press "Submit"
 
 	Then I should see "That phone number is already in our system."
 	
 Scenario: Invalid Phone Number
-	When I fill in "Name" with "Carol"
-	And I fill in "Number" with "123"
-	And I fill in "Password" with "password123"
-	And I fill in "Confirm" with "password123"
+	When I fill in "name_field" with "Carol"
+	And I fill in "phone_number_field" with "123"
+	And I fill in "password_field" with "password123"
+	And I fill in "confirm_password_field" with "password123"
 	
 	And I press "Submit"
 
 	Then I should see "Invalid Phone Number."
 	
 Scenario: Invalid Phone Number (non-number)
-	When I fill in "Name" with "Carol"
-	And I fill in "Number" with "not a number"
-	And I fill in "Password" with "password123"
-	And I fill in "Confirm" with "password123"
+	When I fill in "name_field" with "Carol"
+	And I fill in "phone_number_field" with "not a number"
+	And I fill in "password_field" with "password123"
+	And I fill in "confirm_password_field" with "password123"
 	
 	And I press "Submit"
 
