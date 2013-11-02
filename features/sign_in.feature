@@ -10,7 +10,7 @@ Background: users have been added to the database
   | phone_number | name | password | email   |
   | 123-456-7890 | Bob  | pass     | a@a.com |
 
-  And I am on the myMood home page
+	And I am on the myMood home page
 
 Scenario: User attempts to sign in with no phone number or password
   When I fill in "Phone Number" with ""
@@ -52,5 +52,6 @@ Scenario: User attempts to sign in with a correct phone number and correct passw
   When I fill in "Phone Number" with "123-456-7890"
   When I fill in "Password" with "pass"
   And I press "submit"
-  Then I should see my user page
+  Then I should be on the user index
+  And I should see "Welcome, Bob"
  
