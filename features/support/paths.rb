@@ -12,9 +12,9 @@ module NavigationHelpers
       '/admin'
       
     when /^the myMood home page$/ then '/'
-    when /^the create account page$/ then '/signup'
+    when /^the sign up page$/ then '/signup'
     when /^the user index$/ then '/user/index'
-    when /^the user index$/ then '/admin/index'
+    when /^the admin index$/ then '/admin/index'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
