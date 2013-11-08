@@ -16,6 +16,7 @@ group :development, :test do
   gem 'factory_girl_rails'
 end
 gem 'pg'
+gem 'devise'
 
 
 # Gems used only for assets and not required
